@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Chocolate Day 🍫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1>Happy Chocolate Day 🍫</h1>
+
+        <img src="https://media.tenor.com/RXF9kEWyyHwAAAAi/peach-goma.gif" alt="chocolate gif" class="pageGif">
+
+        <p class="message">
+            Happy Chocolate Day Pragya the sweetest person in my life.
+            Just like chocolate makes everything better, you somehow make my days lighter
+            and happier without even trying.
+            I wish I could hand you your favorite chocolate and see that shy little smile
+            in person, but until then, let this message be my small treat for you.
+            Life feels a little softer, a little warmer, and a lot more special because you’re in it.
+            So here’s something sweet for the girl who unknowingly became my favorite part of every day. 🍫❤️
+        </p>
+
+        <div class="buttons">
+            <button onclick="goBack()">⬅ Back</button>
+            <button onclick="goNext()">Next ➡</button>
+        </div>
+
+    </div>
+
+<script>
+    function goBack() {
+        window.location.href = "page2.html";
+    }
+
+    function goNext() {
+        window.location.href = "page4.html";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Are You Excited? 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+        <img id="mainGif" src="https://media.tenor.com/DmLXGbELO60AAAAi/bubu-dudu-bubu-dudu-happy.gif" alt="asking gif">
+
+        <h1 id="mainText">Are you excited? 😏💖</h1>
+
+        <div class="buttons">
+            <button id="yesBtn">YES 💕</button>
+            <button id="noBtn">NO 😶</button>
+        </div>
+    </div>
+    <div class="heart">❤️</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Rose Day 🌹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1>Happy Rose Day 🌹</h1>
+
+        <img src="https://media.tenor.com/AZ12YafzVwwAAAAi/bubu-dudu-prince-bubu-dudu-princess.gif" alt="rose gif" class="pageGif">
+
+        <p class="message">
+            Ever since you came into my life Pragya, things have felt a little brighter and more special.
+            Even our simplest conversations stay with me the whole day.
+            I wish I could give you a real rose and see that shy smile of yours,
+            but until then, let this message carry my feelings.
+            Distance may keep us in different cities, but it can’t stop me from choosing you
+            and caring about you.
+            So here’s a rose for the girl who makes my ordinary days feel meaningful. 🌹❤️
+        </p>
+
+        <div class="buttons">
+            <button onclick="goBack()">⬅ Back</button>
+            <button onclick="goNext()">Next ➡</button>
+        </div>
+
+    </div>
+
+<script>
+    function goBack() {
+        window.location.href = "index.html";
+    }
+
+    function goNext() {
+        window.location.href = "page3.html";
+    }
+</script>
+
+</body>
+</html>

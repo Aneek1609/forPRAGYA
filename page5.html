@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Promise Day 🤞</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1>Happy Promise Day 🤞</h1>
+
+        <img src="https://media.tenor.com/9PTYErxTTkAAAAAi/bubu-dudu-bubu.gif" alt="promise gif" class="pageGif">
+
+        <p class="message">
+            Happy Promise Day,Pragaya. I’m not going to make big dramatic promises or movie-type speeches…
+            just small, real ones.
+            I promise to respect you, to listen to you, and to always try to understand you
+            even when you’re being extra moody 😌.
+            I promise to support your dreams, laugh with you,
+            and never let distance change the way I treat you.
+            Nothing too serious, just simple promises from someone who genuinely cares about you.
+            And I’ll try my best to keep them, pinky promise. 🤞❤️
+        </p>
+
+        <div class="buttons">
+            <button onclick="goBack()">⬅ Back</button>
+            <button onclick="goNext()">Next ➡</button>
+        </div>
+
+    </div>
+
+<script>
+    function goBack() {
+        window.location.href = "page4.html";
+    }
+
+    function goNext() {
+        window.location.href = "page6.html";
+    }
+</script>
+
+</body>
+</html>

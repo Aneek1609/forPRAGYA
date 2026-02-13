@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Kiss Day 💋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1>Happy Kiss Day 💋</h1>
+
+        <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" alt="kiss gif" class="pageGif">
+
+        <p class="message">
+            Happy Kiss Day,Pragya. I still remember the first time you kissed me on the cheek 
+            for a second, uss waqt mera dimag pura blank ho gaya tha.
+            I didn’t know how to react, what to say, or even how to process it…
+            I just stood there, smiling like an idiot.
+            It was such a small moment, but somehow it became one of the most special memories of my life.
+            That one kiss wasn’t just cute, it felt pure, warm, and real.
+            Even now, whenever I think about it, I can’t help but smile.
+            If moments like that are what we create together,
+            then I’m really lucky to have you. 💋❤️
+        </p>
+
+        <div class="buttons">
+            <button onclick="goBack()">⬅ Back</button>
+            <button onclick="goNext()">Next ➡</button>
+        </div>
+
+    </div>
+
+<script>
+    function goBack() {
+        window.location.href = "page6.html";
+    }
+
+    function goNext() {
+        window.location.href = "page8.html";
+    }
+</script>
+
+</body>
+</html>

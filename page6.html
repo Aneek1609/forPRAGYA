@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Hug Day 🤗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function createFloating() {
+        const element = document.createElement("div");
+        element.classList.add("floating");
+
+        const symbols = ["❤️", "✨"];
+        element.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        element.style.left = Math.random() * 100 + "vw";
+        element.style.fontSize = (Math.random() * 15 + 15) + "px";
+        element.style.animationDuration = (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(element);
+
+        setTimeout(() => {
+            element.remove();
+        }, 8000);
+    }
+
+    // More hearts & sparkles
+    setInterval(createFloating, 400);
+</script>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgMusic" autoplay loop>
+    <source src="blue.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="container">
+
+        <h1>Happy Hug Day 🤗</h1>
+
+        <img src="https://media.tenor.com/fFpVFqD_4esAAAAi/peluk.gif" alt="hug gif" class="pageGif">
+
+        <p class="message">
+            Happy Hug Day,Pragya. If I could, I’d give you the longest, calmest hug right now
+            the kind where you don’t say anything, but somehow everything feels okay.
+            Since I can’t be there in person, imagine this message wrapping around you like a warm hug.
+            Whenever you feel tired, stressed, or just need a little comfort,
+            remember there’s someone who would happily hold you close and make you smile.
+            Until the day I can hug you for real, consider this my virtual one
+            tight enough to make you feel safe, but soft enough to make you blush a little. 🤗❤️
+        </p>
+
+        <div class="buttons">
+            <button onclick="goBack()">⬅ Back</button>
+            <button onclick="goNext()">Next ➡</button>
+        </div>
+
+    </div>
+
+<script>
+    function goBack() {
+        window.location.href = "page5.html";
+    }
+
+    function goNext() {
+        window.location.href = "page7.html";
+    }
+</script>
+
+</body>
+</html>

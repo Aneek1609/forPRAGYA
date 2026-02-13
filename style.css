@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Center everything */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#mainGif {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: hotpink;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: deeppink;
+}
+
+#noBtn {
+    background-color: gray;
+    color: white;
+}
+.pageGif {
+    width: 220px;
+    margin: 20px 0;
+}
+
+.message {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.buttons button {
+    padding: 10px 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: hotpink;
+    color: white;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background-color: deeppink;
+}
+.photo {
+    width: 220px;        /* fixed size */
+    height: 220px;       /* keep square */
+    object-fit: cover;   /* crop properly */
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+/* Floating Hearts & Sparkles */
+.floating {
+    position: fixed;
+    bottom: -20px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
